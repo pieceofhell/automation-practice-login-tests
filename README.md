@@ -11,7 +11,7 @@ Este projeto contém testes automatizados da tela de login do site Automation Pr
 - Pytest
 
 📂 Estrutura de Diretórios
-
+```
 .
 ├── pages/                 # Page Object Models
 │   └── login_page.py      # Página de login
@@ -20,6 +20,7 @@ Este projeto contém testes automatizados da tela de login do site Automation Pr
 ├── conftest.py            # Setup do Selenium WebDriver
 ├── requirements.txt       # Dependências do projeto
 └── README.md              # Este arquivo
+```
 
 📋 Cenários de Teste (em Gherkin)
 
@@ -39,6 +40,12 @@ Scenario: Login com campos vazios
   Dado que o usuário está na página de login
   Quando ele clica no botão "Sign in" sem preencher e-mail e senha
   Então uma mensagem de erro deve ser exibida indicando que os campos são obrigatórios
+
+Scenario bonus: Criação de conta com e-mail já cadastrado
+  Dado que o usuário está na página de login
+  Quando ele insere um e-mail já registrado no campo de criação de conta
+  E clica no botão "Create an account"
+  Então uma mensagem de erro deve ser exibida informando que o e-mail já está cadastrado
 
 🧰 Instalação
 
