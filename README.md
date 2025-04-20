@@ -41,7 +41,7 @@ Scenario: Login com campos vazios
   Quando ele clica no botão "Sign in" sem preencher e-mail e senha
   Então uma mensagem de erro deve ser exibida indicando que os campos são obrigatórios
 
-Scenario bonus: Criação de conta com e-mail já cadastrado
+Scenario Bonus: Criação de conta com e-mail já cadastrado
   Dado que o usuário está na página de login
   Quando ele insere um e-mail já registrado no campo de criação de conta
   E clica no botão "Create an account"
@@ -50,25 +50,38 @@ Scenario bonus: Criação de conta com e-mail já cadastrado
 🧰 Instalação
 
 1. Clone o repositório
-
+```
 git clone https://github.com/seu-usuario/automation-practice-login-tests.git
+```
+```
 cd automation-practice-login-tests
-
+```
 2. Criação e ativação um ambiente virtual
-
+```
 python -m venv venv
+```
+
+```
 source venv/bin/activate   # Linux/macOS
+```
+
+```
 venv\Scripts\activate.bat  # Windows
+```
 
 3. Instalação de dependências
 
+```
 pip install -r requirements.txt
+```
 
 🚀 Execução de testes
 
 Com o ambiente ativado, é possível executar os testes com:
 
+```
 pytest tests/test_login.py -v
+```
 
 🧪 Pré-requisitos
 
