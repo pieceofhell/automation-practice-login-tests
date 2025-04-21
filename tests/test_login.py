@@ -1,4 +1,5 @@
 import pytest
+import time
 from pages.login_page import LoginPage
 
 # Constantes para teste (nome listado está como John Doe, aniversário setado para 01/01/2000)
@@ -40,4 +41,5 @@ class TestLogin:
         page.open()
         page.fill_sign_up_email(VALID_EMAIL)
         page.click_create()
+        time.sleep(2)   # Aguardar o carregamento da página (resposta para esse erro parece um pouco mais devagar...)
         assert "An account using this email address has already been registered. Please enter a valid password or request a new one." in page.get_error_message()
