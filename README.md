@@ -22,30 +22,38 @@ Este projeto contém testes automatizados da tela de login do site Automation Pr
 └── README.md              # Este arquivo
 ```
 
-📋 Cenários de Teste (em Gherkin)
+📋 Cenários de Teste
 
+```
 Scenario: Login com e-mail e senha válidos
   Dado que o usuário está na página de login
   Quando ele insere um e-mail válido e uma senha válida
   E clica no botão "Sign in"
   Então ele deve ser redirecionado para a página da conta pessoal
+```
 
+```
 Scenario: Login com e-mail inválido
   Dado que o usuário está na página de login
   Quando ele insere um e-mail inválido e uma senha qualquer
   E clica no botão "Sign in"
   Então uma mensagem de erro deve ser exibida informando que o e-mail não é válido
+```
 
+```
 Scenario: Login com campos vazios
   Dado que o usuário está na página de login
   Quando ele clica no botão "Sign in" sem preencher e-mail e senha
   Então uma mensagem de erro deve ser exibida indicando que os campos são obrigatórios
+```
 
+```
 Scenario Bonus: Criação de conta com e-mail já cadastrado
   Dado que o usuário está na página de login
   Quando ele insere um e-mail já registrado no campo de criação de conta
   E clica no botão "Create an account"
   Então uma mensagem de erro deve ser exibida informando que o e-mail já está cadastrado
+```
 
 🧰 Instalação
 
